@@ -1,0 +1,113 @@
+
+    module.exports = function (app) {
+        const modelName = 'invoice';
+        const mongooseClient = app.get('mongooseClient');
+        const { Schema } = mongooseClient;
+        const schema = new Schema(
+          {
+            noff: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+invoicetype: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+invoicedateandtime: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+originaleinvoicereferencenumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+suppliername: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+suppliertin: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+suppliersstregistrationnumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+identifiertype: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+identifiernumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+suppliermsiccode: { type: Date, required: false },
+suppliertourismtaxregistrationnumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+supplierbusinessactivitydescription: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+supplieremail: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+thefirstsuppliercontactnumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+suppliercontactnumber: { type: Date, required: false },
+countryname: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+statename: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+cityname: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+postalzone: { type: Date, required: false },
+buyername: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyertin: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyersstregistrationnumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyerbusinessregistrationnumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyeremail: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyercountryname: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyerstatename: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyercityname: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyerpostalzone: { type: Date, required: false },
+thefirstbuyercontactnumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+buyercontactnumber: { type: Number, required: false, min: 0, max: 3656768789 },
+invoicecurrency: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+currencyexchangerate: { type: Date, required: false },
+frequencyofbilling: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+billingperiodstartdate: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+billingperiodenddate: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+paymentmode: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+supplierbankaccountnumber: { type: Number, required: false, min: 0, max: 39382983989222 },
+paymentterms: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+prepaymentamount: { type: Number, required: false, min: 0, max: 10000000 },
+prepaymentdate: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+prepaymentreferencenumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+shippingrecipientname: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+shippingrecipientcountryname: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+shippingrecipientstatename: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+shippingrecipientcityname: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+shippingrecipientpostalzone: { type: Date, required: false },
+shippingrecipienttin: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+shippingrecipientidentifiertype: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+shippingrecipientbusinessregistrationnumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+billreferencenumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+referencenumberofcustomsformno1: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+incoterms: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+freetradeagreementinformation: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+authorisationnumberforcertifiedexporter: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+referencenumberofcustomsformno2: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+invoicelinenumber: { type: Date, required: false },
+invoicelineclassification: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+productname: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+quantity: { type: Date, required: false },
+unitprice: { type: Date, required: false },
+measurement: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+subtotal: { type: Date, required: false },
+countryoforigin: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+totalexcludingtax: { type: Date, required: false },
+taxtype: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+taxrate: { type: Date, required: false },
+taxamount: { type: Date, required: false },
+taxexemptiondetails: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+taxexemptionamount: { type: Date, required: false },
+discountrate: { type: Date, required: false },
+discountamount: { type: Date, required: false },
+discountdescription: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+feeorchargerate: { type: Date, required: false },
+feeorchargeamount: { type: Date, required: false },
+totaltaxableamountpertaxtype: { type: Date, required: false },
+totaltaxamountpertaxtype: { type: Date, required: false },
+detailsoftaxexemption: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+amountexemptedfromtax: { type: Date, required: false },
+additionaldiscountamount: { type: Date, required: false },
+additionaldiscountdescription: { type: Date, required: false },
+additionalfeeamount: { type: Date, required: false },
+additionalfeedescription: { type: Date, required: false },
+totaldiscountvalue: { type: Date, required: false },
+totalfeeorchargeamount: { type: Date, required: false },
+totaltaxamount: { type: Date, required: false },
+totalnetamount: { type: Date, required: false },
+totalincludingtax: { type: Date, required: false },
+roundingamount: { type: Date, required: false },
+totalpayableamount: { type: Date, required: false },
+invoicenumber: { type: String, required: false, unique: false, lowercase: false, uppercase: false, minLength: 2, maxLength: 1000, index: true, trim: true },
+
+            
+            createdBy: { type: Schema.Types.ObjectId, ref: "users", required: true },
+            updatedBy: { type: Schema.Types.ObjectId, ref: "users", required: true }
+          },
+          {
+            timestamps: true
+        });
+      
+       
+        if (mongooseClient.modelNames().includes(modelName)) {
+          mongooseClient.deleteModel(modelName);
+        }
+        return mongooseClient.model(modelName, schema);
+        
+      };

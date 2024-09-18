@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "66e770669089b0bd8e75986e"
+  },
+  "name": "onDynaLoader",
+  "subject": "Data Loader Completed",
+  "body": "The Job Id : {{id}}",
+  "variables": [
+    "id"
+  ],
+  "createdAt": {
+    "$date": "2024-09-15T23:40:22.361Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-15T23:40:22.361Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e770669089b0bd8e75986f"
+  },
+  "name": "onCodeVerify",
+  "subject": "Email Verification Code",
+  "body": "<p>Hi {{name}},</p><p><br></p><p><br></p><p>Your email verification is required.</p><p><br></p><p><br></p><p><strong>The Verification Code : {{code}}</strong></p><p><br></p><p><strong><span class=\"ql-cursor\">﻿</span></strong></p><p><br></p><p>This is an automated email.</p>",
+  "variables": [
+    "id"
+  ],
+  "createdAt": {
+    "$date": "2024-09-15T23:40:22.361Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-15T23:40:22.361Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e770669089b0bd8e759870"
+  },
+  "name": "onUserConfirmation",
+  "subject": "Data Loader Completed",
+  "body": "The Job Id : {{id}}",
+  "variables": [
+    "id"
+  ],
+  "createdAt": {
+    "$date": "2024-09-15T23:40:22.362Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-15T23:40:22.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e770669089b0bd8e759871"
+  },
+  "name": "onWelcomeEmail",
+  "subject": "Data Loader Completed",
+  "body": "The Job Id : {{id}}",
+  "variables": [
+    "id"
+  ],
+  "createdAt": {
+    "$date": "2024-09-15T23:40:22.362Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-15T23:40:22.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e770669089b0bd8e759872"
+  },
+  "name": "onChangeForgotPassword",
+  "subject": "Reset Password Link",
+  "body": "<p>Hi {{name}},</p><p><br></p><p><br></p><p>Password Reset for : {{email}}</p><p><br></p><p><br></p><p>&lt;p&gt;&lt;a href=\"{{clientUrl}}\" target=\"_blank\" rel=\"noopener noreferrer\"&gt; Reset Link &lt;/a&gt;&lt;/p&gt;</p><p><br></p><p><br></p><p><br></p><p>Please follow the link to change your password.</p><p><br></p><p><br></p><p>This is an automated email.</p><p><br></p>",
+  "variables": [
+    "clientUrl",
+    "name",
+    "email"
+  ],
+  "createdAt": {
+    "$date": "2024-09-15T23:40:22.362Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-15T23:40:22.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e770669089b0bd8e759873"
+  },
+  "name": "onChangeForgotPasswordFailed",
+  "subject": "Failed to send failed password reset link",
+  "body": "The Job Id : {{id}}",
+  "variables": [
+    "id"
+  ],
+  "createdAt": {
+    "$date": "2024-09-15T23:40:22.362Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-15T23:40:22.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e8167c875a09f01baeca25"
+  },
+  "name": "onError",
+  "subject": "Error Captured",
+  "body": "The Job Id : {{id}}",
+  "variables": [
+    "id"
+  ]
+}]
